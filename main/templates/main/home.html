@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #4facfe, #ffffff);
+            text-align: center;
+            padding: 30px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #003399;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: #3366cc;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        tr:hover {
+            background-color: #dbeafe;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student List</h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Email</th>
+        </tr>
+
+        {% for s in student %}
+        <tr>
+            <td>{{ s.name }}</td>
+            <td>{{ s.course }}</td>
+            <td>{{ s.grade }}</td>
+            <td>{{ s.email }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
